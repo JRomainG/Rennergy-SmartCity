@@ -35,11 +35,11 @@ def main():
 
         # Buy as much renewable as possible
         energies = np.zeros((3,))
-        i = 3
-        while needed_energy > 0 and i > 0:
-            i -= 1
-            energies[i] = min(needed_energy, energy_available[i])
-            needed_energy -= energies[i]
+        j = 3
+        while needed_energy > 0 and j > 0:
+            j -= 1
+            energies[j] = min(needed_energy, energy_available[j])
+            needed_energy -= energies[j]
 
         # Make sure we're not running out of energy
         assert needed_energy == 0
